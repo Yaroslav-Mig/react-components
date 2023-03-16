@@ -1,6 +1,6 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
-	--shadow-active:0 0 2px 1px;
+  --shadow-active: 0 0 2px 1px;
 
   --color-default: hsl(0, 0%, 55%);
   --color-primary: hsl(210, 100%, 40%);
@@ -10,27 +10,30 @@
   --hover-primary: hsl(210, 100%, 50%);
   --hover-secondary: hsl(345, 70%, 50%);
 
-	--active-default: hsl(0, 0%, 45%);
-	--active-primary: hsl(210, 100%, 30%);;
-	--active-secondary: hsl(345, 80%, 30%);
+  --active-default: hsl(0, 0%, 45%);
+  --active-primary: hsl(210, 100%, 30%);
+  --active-secondary: hsl(345, 80%, 30%);
 
   --disabled-default: hsl(0, 0%, 80%);
-	--disabled-primary: hsl(210, 100%, 80%);
-	--disabled-secondary: hsl(345, 70%, 70%);
+  --disabled-primary: hsl(210, 100%, 80%);
+  --disabled-secondary: hsl(345, 70%, 70%);
 }
 
 .box {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
 }
 
 .btn {
   position: relative;
-  display: block;
-  padding: 10px 15px;
+  display: inline-block;
+	max-width: 170px;
+	width: 100%;
+  padding: 10px;
   color: var(--color-white);
+	font-size: 0.8rem;
   font-weight: 600;
   border: none;
   text-transform: uppercase;
@@ -42,7 +45,7 @@
 }
 
 .btn:disabled {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .default {
@@ -53,7 +56,7 @@
 }
 .btn__default_active,
 .default:active {
-	background-color: var(--active-default);
+  background-color: var(--active-default);
   box-shadow: var(--shadow-active) var(--hover-default);
 }
 .default:disabled {
@@ -68,7 +71,7 @@
 }
 .btn__primary_active,
 .primary:active {
-	background-color: var(--active-primary);
+  background-color: var(--active-primary);
   box-shadow: var(--shadow-active) var(--hover-primary);
 }
 .primary:disabled {
@@ -83,7 +86,7 @@
 }
 .btn__secondary_active,
 .secondary:active {
-	background-color: var(--active-secondary);
+  background-color: var(--active-secondary);
   box-shadow: var(--shadow-active) var(--hover-secondary);
 }
 .secondary:disabled {
@@ -96,8 +99,8 @@
 
 /*TODO: others classes */
 .outline {
-	--color: hsl(210, 100%, 40%);
-	color: var(--color);
+  --color: hsl(210, 100%, 40%);
+  color: var(--color);
   background-color: hsl(--color-white);
   border: 1px var(--color) solid;
 }

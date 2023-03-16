@@ -8,23 +8,36 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-type urlStr = '/button';
+type urlStr = '/button' | '/button-group';
 
 export const PATH: Record<string, urlStr> = {
   BUTTON: '/button',
+  BUTTON_GROUP: '/button-group',
+};
+
+const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
+  return isActive ? css.active : undefined;
 };
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className={css.container}>
+		<div className={css.container}>
+
       <aside className={css.sidebar}>
         <div className={css['logo-box']}>
           <img src={logo} className={css.logo} alt='logo' />
         </div>
         <nav>
-					<ul className={css['nav-list']}>
+          <ul className={css['nav-list']}>
             <li>
-              <NavLink to={PATH.BUTTON}>Button</NavLink>
+              <NavLink to={PATH.BUTTON} className={setActive}>
+                Button
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={PATH.BUTTON_GROUP} className={setActive}>
+                Button Group
+              </NavLink>
             </li>
           </ul>
         </nav>

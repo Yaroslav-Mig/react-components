@@ -10,34 +10,33 @@ type DefaultButtonPropsType = DetailedHTMLProps<
 type btnColor = 'default' | 'primary' | 'secondary';
 
 type SuperButtonProps = DefaultButtonPropsType & {
-  btnType?: btnColor;
-	isActive?: boolean;
+  variant?: btnColor;
+  isActive?: boolean;
 };
 
 const Button: FC<SuperButtonProps> = (props) => {
   const {
     onClick,
     className,
-    btnType = className ? undefined : 'default',
+    variant: btnType = className ? undefined : 'default',
     disabled = false,
-		isActive = false,
+    isActive = false,
     ...attrs
   } = props;
 
   const { btn, btn_disabled } = css;
 
   const classes = clsx(btn, {
-		[css[`${btnType}`]]: btnType,
-		[css[`${className}`]]:className,
-		[css[`btn__${btnType}_active`]]: isActive,
+    [css[`${btnType}`]]: btnType,
+    [css[`${className}`]]: className,
+    [css[`btn__${btnType}_active`]]: isActive,
     [btn_disabled]: disabled,
   });
 
   const clickAction = (e: MouseEvent<HTMLButtonElement>): void => {
-    e.preventDefault();
+    !attrs.type && e.preventDefault();
     onClick && onClick(e);
-	};
-
+  };
 
   return <button className={classes} onClick={clickAction} disabled={disabled} {...attrs} />;
 };

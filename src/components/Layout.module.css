@@ -60,9 +60,12 @@
 	font-size: 1.2rem;
   font-weight: 600;
   border-left: 3px solid transparent;
+	transition: all 0.5s ease-out ;
 }
 
-.nav-list a:hover,
+.nav-list a:hover {
+	text-decoration: underline;
+}
 .nav-list a.active {
   background-color: hsla(0, 0%, 0%, 0.2);
   border-color: hsl(0, 0%, 90%);

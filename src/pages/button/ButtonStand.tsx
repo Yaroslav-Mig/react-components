@@ -8,10 +8,10 @@ const ButtonStand = () => {
         <h3>1. Default buttons, hover effect, active and onClick function:</h3>
         <div className={css.box}>
           <Button onClick={() => console.log('I`m button')}>Button default</Button>
-          <Button onClick={() => console.log('I`m button')} btnType='primary'>
+          <Button onClick={() => console.log('I`m button')} variant='primary'>
             Button primary
           </Button>
-          <Button onClick={() => console.log('I`m button')} btnType='secondary'>
+          <Button onClick={() => console.log('I`m button')} variant='secondary'>
             Button secondary
           </Button>
         </div>
@@ -21,10 +21,10 @@ const ButtonStand = () => {
         <h3>2. Active buttons and hover effect:</h3>
         <div className={css.box}>
           <Button isActive>Button active</Button>
-          <Button btnType='primary' isActive>
+          <Button variant='primary' isActive>
             Button active
           </Button>
-          <Button btnType='secondary' isActive>
+          <Button variant='secondary' isActive>
             Button active
           </Button>
         </div>
@@ -34,10 +34,10 @@ const ButtonStand = () => {
         <h3>3. Disabled buttons:</h3>
         <div className={css.box}>
           <Button disabled>Button disabled</Button>
-          <Button btnType='primary' disabled>
+          <Button variant='primary' disabled>
             Button disabled
           </Button>
-          <Button btnType='secondary' disabled>
+          <Button variant='secondary' disabled>
             Button disabled
           </Button>
         </div>
@@ -46,10 +46,10 @@ const ButtonStand = () => {
       <div>
         <h3>4. Supporting data, type and etc. attributes</h3>
         <div className={css.box}>
-          <Button data-name='button' btnType='primary'>
+          <Button data-name='button' variant='primary'>
             Button disabled
           </Button>
-          <Button type='submit' btnType='secondary'>
+          <Button type='submit' variant='secondary'>
             Button disabled
           </Button>
         </div>

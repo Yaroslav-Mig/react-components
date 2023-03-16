@@ -1,0 +1,33 @@
+.box {
+  position: relative;
+  display: inline-flex;
+	justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box > button {
+  min-width:70px;
+  margin: 0;
+}
+
+.box > button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.box > button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.vertical {
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.vertical > button:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.vertical > button:last-child {
+  border-radius: 0 0 5px 5px;
+}
