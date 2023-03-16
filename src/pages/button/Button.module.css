@@ -1,29 +1,48 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
+	--shadow-active:0 0 2px 1px;
 
-  --color-default: hsl(200, 0%, 60%);
+  --color-default: hsl(0, 0%, 55%);
   --color-primary: hsl(210, 100%, 40%);
   --color-secondary: hsl(345, 70%, 40%);
 
-	--hover-default:hsl(200, 10%, 70%);
-	--hover-primary:hsl(210, 100%, 50%);
-	--hover-secondary: hsl(345, 70%, 50%);
+  --hover-default: hsl(0, 0%, 70%);
+  --hover-primary: hsl(210, 100%, 50%);
+  --hover-secondary: hsl(345, 70%, 50%);
+
+	--active-default: hsl(0, 0%, 45%);
+	--active-primary: hsl(210, 100%, 30%);;
+	--active-secondary: hsl(345, 80%, 30%);
+
+  --disabled-default: hsl(0, 0%, 80%);
+	--disabled-primary: hsl(210, 100%, 80%);
+	--disabled-secondary: hsl(345, 70%, 70%);
+}
+
+.box {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5px;
 }
 
 .btn {
   position: relative;
-  display: inline-block;
+  display: block;
   padding: 10px 15px;
-  margin-right: 5px;
   color: var(--color-white);
   font-weight: 600;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
-	letter-spacing: 0.3px;
-	word-spacing: 1px;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
   cursor: pointer;
-	transition: background-color 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.btn:disabled {
+	pointer-events: none;
 }
 
 .default {
@@ -32,12 +51,28 @@
 .default:hover {
   background-color: var(--hover-default);
 }
+.btn__default_active,
+.default:active {
+	background-color: var(--active-default);
+  box-shadow: var(--shadow-active) var(--hover-default);
+}
+.default:disabled {
+  background-color: var(--disabled-default);
+}
 
 .primary {
   background-color: var(--color-primary);
 }
 .primary:hover {
   background-color: var(--hover-primary);
+}
+.btn__primary_active,
+.primary:active {
+	background-color: var(--active-primary);
+  box-shadow: var(--shadow-active) var(--hover-primary);
+}
+.primary:disabled {
+  background-color: var(--disabled-primary);
 }
 
 .secondary {
@@ -46,4 +81,23 @@
 .secondary:hover {
   background-color: var(--hover-secondary);
 }
+.btn__secondary_active,
+.secondary:active {
+	background-color: var(--active-secondary);
+  box-shadow: var(--shadow-active) var(--hover-secondary);
+}
+.secondary:disabled {
+  background-color: var(--disabled-secondary);
+}
 
+.btn_disabled {
+  cursor: default;
+}
+
+/*TODO: others classes */
+.outline {
+	--color: hsl(210, 100%, 40%);
+	color: var(--color);
+  background-color: hsl(--color-white);
+  border: 1px var(--color) solid;
+}
