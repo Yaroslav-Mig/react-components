@@ -24,13 +24,12 @@ const Button: FC<SuperButtonProps> = (props) => {
     ...attrs
   } = props;
 
-  const { btn, btn_disabled } = css;
+  const { btn } = css;
 
   const classes = clsx(btn, {
     [css[`${btnType}`]]: btnType,
     [css[`${className}`]]: className,
     [css[`btn__${btnType}_active`]]: isActive,
-    [btn_disabled]: disabled,
   });
 
   const clickAction = (e: MouseEvent<HTMLButtonElement>): void => {

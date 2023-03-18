@@ -45,7 +45,7 @@
 }
 
 .btn:disabled {
-  pointer-events: none;
+	cursor: not-allowed;
 }
 
 .default {
@@ -91,10 +91,6 @@
 }
 .secondary:disabled {
   background-color: var(--disabled-secondary);
-}
-
-.btn_disabled {
-  cursor: default;
 }
 
 /*TODO: others classes */

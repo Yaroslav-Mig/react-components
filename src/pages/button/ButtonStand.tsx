@@ -7,11 +7,11 @@ const ButtonStand = () => {
       <div>
         <h3>1. Default buttons, hover effect, active and onClick function:</h3>
         <div className={css.box}>
-          <Button onClick={() => console.log('I`m button')}>Button default</Button>
-          <Button onClick={() => console.log('I`m button')} variant='primary'>
+          <Button onClick={() => console.log('I`m default')}>Button default</Button>
+          <Button onClick={() => console.log('I`m primary')} variant='primary'>
             Button primary
           </Button>
-          <Button onClick={() => console.log('I`m button')} variant='secondary'>
+          <Button onClick={() => console.log('I`m secondary')} variant='secondary'>
             Button secondary
           </Button>
         </div>
@@ -33,8 +33,8 @@ const ButtonStand = () => {
       <div>
         <h3>3. Disabled buttons:</h3>
         <div className={css.box}>
-          <Button disabled>Button disabled</Button>
-          <Button variant='primary' disabled>
+          <Button onClick={() => console.log('Click')} disabled>Button disabled</Button>
+          <Button onClick={() => console.log('Click')} variant='primary' disabled>
             Button disabled
           </Button>
           <Button variant='secondary' disabled>
@@ -47,10 +47,10 @@ const ButtonStand = () => {
         <h3>4. Supporting data, type and etc. attributes</h3>
         <div className={css.box}>
           <Button data-name='button' variant='primary'>
-            Button disabled
+            Button
           </Button>
           <Button type='submit' variant='secondary'>
-            Button disabled
+            Button
           </Button>
         </div>
       </div>
