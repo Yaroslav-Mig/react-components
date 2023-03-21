@@ -3,7 +3,7 @@ import ButtonGroup from './ButtonGroup';
 import Button from '../button/Button';
 
 const ButtonGroupStand = () => {
-	const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
   const toggleHandler = () => setToggle((prev) => !prev);
 
   return (
@@ -22,7 +22,6 @@ const ButtonGroupStand = () => {
         <ButtonGroup isVertical>
           <Button variant='primary'>First</Button>
           <Button variant='primary' isActive>
-            {' '}
             Middle
           </Button>
           <Button variant='primary'>Last</Button>

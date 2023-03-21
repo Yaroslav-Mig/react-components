@@ -44,7 +44,7 @@
   transition: all 200ms ease-in;
 }
 
-.btn:disabled {
+.btn_disabled {
 	cursor: not-allowed;
 }
 
@@ -55,7 +55,7 @@
   background-color: var(--hover-default);
 }
 .btn__default_active,
-.default:active {
+.default:not(.btn_disabled):active {
   background-color: var(--active-default);
   box-shadow: var(--shadow-active) var(--hover-default);
 }
@@ -70,7 +70,7 @@
   background-color: var(--hover-primary);
 }
 .btn__primary_active,
-.primary:active {
+.primary:not(.btn_disabled):active {
   background-color: var(--active-primary);
   box-shadow: var(--shadow-active) var(--hover-primary);
 }
@@ -85,7 +85,7 @@
   background-color: var(--hover-secondary);
 }
 .btn__secondary_active,
-.secondary:active {
+.secondary:not(.btn_disabled):active {
   background-color: var(--active-secondary);
   box-shadow: var(--shadow-active) var(--hover-secondary);
 }

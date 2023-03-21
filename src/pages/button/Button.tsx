@@ -11,25 +11,28 @@ type btnColor = 'default' | 'primary' | 'secondary';
 
 type SuperButtonProps = DefaultButtonPropsType & {
   variant?: btnColor;
-  isActive?: boolean;
+	isActive?: boolean;
+	outerClass?: string;
 };
 
 const Button: FC<SuperButtonProps> = (props) => {
-  const {
-    onClick,
+	const {
+		onClick,
     className,
-    variant: btnType = className ? undefined : 'default',
+		outerClass,
+    variant = className ? undefined : 'default',
     disabled = false,
     isActive = false,
     ...attrs
   } = props;
 
-  const { btn } = css;
+  const { btn, btn_disabled } = css;
 
-  const classes = clsx(btn, {
-    [css[`${btnType}`]]: btnType,
+  const classes = clsx(btn, outerClass, {
+    [css[`${variant}`]]: variant,
     [css[`${className}`]]: className,
-    [css[`btn__${btnType}_active`]]: isActive,
+		[css[`btn__${variant}_active`]]: isActive,
+		[btn_disabled]: disabled,
   });
 
   const clickAction = (e: MouseEvent<HTMLButtonElement>): void => {
