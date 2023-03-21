@@ -1,0 +1,25 @@
+.img {
+	display: inline-block;
+	max-width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	object-fit: cover;
+}
+
+.oval
+.rounded,
+.circle {
+  overflow: hidden;
+}
+
+.rounded {
+	border-radius: 10px;
+}
+
+.oval {
+	border-radius: 80%/40%;
+}
+
+.circle {
+	border-radius: 50%;
+}

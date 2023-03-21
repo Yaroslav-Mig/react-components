@@ -60,7 +60,7 @@ const IconStand = () => {
       <div>
         <h3>3. Button group with icons:</h3>
         <ButtonGroup>
-          <Button variant='primary' outerClass={css['btn_socials']}>
+					<Button variant='primary' outerClass={css['btn_socials']}>
             <FontAwesomeIcon icon={faTwitter} size='lg'/>
           </Button>
           <Button variant='primary' outerClass={css['btn_socials']}>

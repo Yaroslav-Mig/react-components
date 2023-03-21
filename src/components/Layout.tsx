@@ -8,12 +8,13 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-type urlStr = '/button' | '/button-group' | '/icon';
+type urlStr = '/button' | '/button-group' | '/icon' | '/image';
 
 export const PATH: Record<string, urlStr> = {
   BUTTON: '/button',
   BUTTON_GROUP: '/button-group',
   ICON: '/icon',
+  IMAGE: '/image',
 };
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -42,6 +43,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <li>
               <NavLink to={PATH.ICON} className={setActive}>
                 Icon
+              </NavLink>
+						</li>
+						<li>
+              <NavLink to={PATH.IMAGE} className={setActive}>
+                Image
               </NavLink>
             </li>
           </ul>

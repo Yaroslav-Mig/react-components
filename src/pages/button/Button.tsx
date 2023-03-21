@@ -2,14 +2,14 @@ import { ButtonHTMLAttributes, DetailedHTMLProps, FC, MouseEvent } from 'react';
 import clsx from 'clsx';
 import css from './Button.module.css';
 
-type DefaultButtonPropsType = DetailedHTMLProps<
+type DefaultButtonProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 
 type btnColor = 'default' | 'primary' | 'secondary';
 
-type SuperButtonProps = DefaultButtonPropsType & {
+type SuperButtonProps = DefaultButtonProps & {
   variant?: btnColor;
 	isActive?: boolean;
 	outerClass?: string;

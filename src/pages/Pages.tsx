@@ -4,6 +4,7 @@ import { PATH } from '../components/Layout';
 import ButtonStand from './button/ButtonStand';
 import ButtonGroupStand from './button-group/ButtonGroupStand';
 import IconStand from './icon/IconStand';
+import ImageStand from './image/ImageStand';
 
 const Pages = () => {
   return (
@@ -12,6 +13,7 @@ const Pages = () => {
       <Route path={PATH.BUTTON} element={<ButtonStand />} />
       <Route path={PATH.BUTTON_GROUP} element={<ButtonGroupStand />} />
       <Route path={PATH.ICON} element={<IconStand />} />
+      <Route path={PATH.IMAGE} element={<ImageStand />} />
     </Routes>
   );
 };
