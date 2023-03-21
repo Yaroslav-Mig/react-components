@@ -8,11 +8,12 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-type urlStr = '/button' | '/button-group';
+type urlStr = '/button' | '/button-group' | '/icon';
 
 export const PATH: Record<string, urlStr> = {
   BUTTON: '/button',
   BUTTON_GROUP: '/button-group',
+  ICON: '/icon',
 };
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -21,8 +22,7 @@ const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-		<div className={css.container}>
-
+    <div className={css.container}>
       <aside className={css.sidebar}>
         <div className={css['logo-box']}>
           <img src={logo} className={css.logo} alt='logo' />
@@ -37,6 +37,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <li>
               <NavLink to={PATH.BUTTON_GROUP} className={setActive}>
                 Button Group
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={PATH.ICON} className={setActive}>
+                Icon
               </NavLink>
             </li>
           </ul>

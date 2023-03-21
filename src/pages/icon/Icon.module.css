@@ -1,0 +1,20 @@
+.box {
+	display: flex;
+	align-items: center;
+}
+
+.span-1 {
+  color: hsl(210, 100%, 55%);
+}
+
+.mask {
+  background-color: hsl(179, 50%, 90%);
+}
+
+.camera {
+  color: hsl(0, 70%, 50%);
+}
+
+.btn_socials:not(:last-child) {
+	border-right: 1px solid hsl(0, 0%, 75%);
+}
