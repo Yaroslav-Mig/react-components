@@ -8,14 +8,13 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-type urlStr = '/button' | '/button-group' | '/icon' | '/image';
-
-export const PATH: Record<string, urlStr> = {
+export const PATH = {
   BUTTON: '/button',
   BUTTON_GROUP: '/button-group',
   ICON: '/icon',
   IMAGE: '/image',
-};
+  CHIP: '/chip',
+} as const;
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
   return isActive ? css.active : undefined;
@@ -48,6 +47,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 						<li>
               <NavLink to={PATH.IMAGE} className={setActive}>
                 Image
+              </NavLink>
+						</li>
+						<li>
+							<NavLink to={PATH.CHIP} className={setActive}>
+                Chip
               </NavLink>
             </li>
           </ul>
