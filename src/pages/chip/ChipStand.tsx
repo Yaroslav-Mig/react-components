@@ -1,12 +1,13 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import css from './Chip.module.css';
+
 import Chip from './Chip';
 
 const ChipStand = () => {
   const onCloseAction = () => {
     console.log('clicked on a close icon');
-	};
+  };
 
   return (
     <>
@@ -23,14 +24,23 @@ const ChipStand = () => {
       <div>
         <h3>3. Chips with icon and close button:</h3>
         <div className={css.box}>
-          <Chip text='Log in' withIcon Icon={FontAwesomeIcon} />
+          <Chip
+            text='Log in'
+            withIcon
+            renderIcon={(props) => <FontAwesomeIcon icon={faUser} size={props.size} />}
+          />
           <Chip text='Log out' withClose />
         </div>
       </div>
 
       <div>
         <h3>4. Full chip with icons:</h3>
-        <Chip text='Barcelona' withIcon Icon={FontAwesomeIcon} withClose />
+        <Chip
+          text='Barcelona'
+          withIcon
+          renderIcon={(props) => <FontAwesomeIcon icon={faUser} size={props.size} />}
+          withClose
+        />
       </div>
 
       <div>
@@ -38,8 +48,8 @@ const ChipStand = () => {
         <Chip
           text='CSS'
           withImage
-          imageSrc='https://cdn-icons-png.flaticon.com/512/919/919826.png'
-          imgAlt='react'
+          imageSrc='https://cdn-icons-png.flaticon.com/512/732/732190.png'
+          imgAlt='css'
         />
       </div>
 
@@ -53,24 +63,24 @@ const ChipStand = () => {
             imgAlt='react'
             withClose
             onCloseChip={onCloseAction}
-					/>
-					<Chip
+          />
+          <Chip
             text='Typescript'
             withImage
             imageSrc='https://cdn-icons-png.flaticon.com/512/5968/5968326.png'
             imgAlt='typescript'
             withClose
             onCloseChip={onCloseAction}
-					/>
-					<Chip
+          />
+          <Chip
             text='Javascript'
             withImage
             imageSrc='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'
-            imgAlt='typescript'
+            imgAlt='javascript'
             withClose
             onCloseChip={onCloseAction}
           />
-				</div>
+        </div>
       </div>
     </>
   );

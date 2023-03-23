@@ -1,5 +1,8 @@
-import { ComponentType, MouseEvent } from 'react';
+import { MouseEvent, ReactElement } from 'react';
+
 import { FontAwesomeIconProps, FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import css from './Chip.module.css';
 import clsx from 'clsx';
@@ -23,14 +26,18 @@ type CommonChipProps = {
 type ConditionalChipProps =
   | {
       withIcon: boolean;
-      Icon: ComponentType<FontAwesomeIconProps>;
+      renderIcon?: (
+        settings: Omit<FontAwesomeIconProps, 'icon'>
+      ) => ReactElement<FontAwesomeIconProps>;
+      iconSize?: SizeProp;
       withImage?: never;
       imageSrc?: never;
       imgAlt?: never;
     }
   | {
       withIcon?: never;
-      Icon?: never;
+      renderIcon?: never;
+      iconSize?: never;
       withImage?: boolean;
       imageSrc?: string;
       imgAlt?: string;
@@ -44,7 +51,8 @@ const Chip = (props: ChipProps): JSX.Element => {
     className,
     isActive,
     withIcon,
-    Icon,
+    iconSize = 'sm',
+    renderIcon,
     withImage,
     imageSrc,
     imgAlt,
@@ -69,6 +77,8 @@ const Chip = (props: ChipProps): JSX.Element => {
     onCloseChip && onCloseChip(e, id);
   };
 
+  const icon = renderIcon && renderIcon({ size: iconSize });
+
   return (
     <div className={classChip} onClick={clickChipHandler}>
       {withImage ? (
@@ -77,17 +87,13 @@ const Chip = (props: ChipProps): JSX.Element => {
         </span>
       ) : null}
 
-      {withIcon ? (
-        <span className={chipIcon}>
-          <Icon icon={['fas', 'user']} size='sm' />
-        </span>
-      ) : null}
+      {withIcon ? <span className={chipIcon}>{icon}</span> : null}
 
       <span className={chipText}>{text}</span>
 
       {withClose ? (
         <span className={chipClose} onClick={closeChipHandler}>
-          <FontAwesomeIcon icon={['fas', 'xmark']} />
+          <FontAwesomeIcon icon={faXmark} />
         </span>
       ) : null}
     </div>
