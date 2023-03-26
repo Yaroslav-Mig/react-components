@@ -18,6 +18,8 @@
   --disabled-default: hsl(0, 0%, 80%);
   --disabled-primary: hsl(210, 100%, 80%);
   --disabled-secondary: hsl(345, 70%, 70%);
+
+	--transition-200ms: all 200ms ease-in;
 }
 
 *,

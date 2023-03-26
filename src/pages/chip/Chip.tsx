@@ -10,17 +10,17 @@ import clsx from 'clsx';
 import Image from '../image/Image';
 
 type ChipProps = CommonChipProps & ConditionalChipProps;
-type Id = string | number | null;
+export type chipId = string | number | null;
 
 type CommonChipProps = {
-  id?: Id;
+  id?: chipId;
   text: string | number;
   className?: string;
   outerClass?: string;
   isActive?: boolean;
   withClose?: boolean;
-  onClickChip?: (e: MouseEvent<HTMLDivElement>, id: Id) => void;
-  onCloseChip?: (e: MouseEvent<HTMLSpanElement>, id: Id) => void;
+  onClickChip?: (id: chipId) => void;
+  onCloseChip?: (id: chipId) => void;
 };
 
 type ConditionalChipProps =
@@ -68,13 +68,13 @@ const Chip = (props: ChipProps): JSX.Element => {
     [active]: isActive,
   });
 
-  const clickChipHandler = (e: MouseEvent<HTMLDivElement>) => {
-    onClickChip && onClickChip(e, id);
+  const clickChipHandler = () => {
+    onClickChip && onClickChip(id);
   };
 
   const closeChipHandler = (e: MouseEvent<HTMLSpanElement>) => {
-    e.stopPropagation();
-    onCloseChip && onCloseChip(e, id);
+		e.stopPropagation();
+    onCloseChip && onCloseChip(id);
   };
 
   const icon = renderIcon && renderIcon({ size: iconSize });

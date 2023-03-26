@@ -20,7 +20,7 @@
   letter-spacing: 0.3px;
   word-spacing: 1px;
   cursor: pointer;
-  transition: all 200ms ease-in;
+  transition: var(--transition-200ms);;
 }
 
 .btn_disabled {

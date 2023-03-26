@@ -14,10 +14,11 @@
   background-color: var(--bg-chip);
   overflow: hidden;
   cursor: pointer;
+	transition: var(--transition-200ms);
 }
 
 .chip.active {
-  background-color: hsl(8, 75%, 48%);
+  background-color: hsl(56, 60%, 80%)
 }
 
 .chipImage,

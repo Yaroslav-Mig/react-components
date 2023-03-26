@@ -3,6 +3,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import css from './Chip.module.css';
 
 import Chip from './Chip';
+import ChipState from './ChipState';
 
 const ChipStand = () => {
   const onCloseAction = () => {
@@ -80,7 +81,12 @@ const ChipStand = () => {
             withClose
             onCloseChip={onCloseAction}
           />
-        </div>
+				</div>
+			</div>
+
+			<div>
+        <h3>7. Chip with state, icon, active and remove:</h3>
+        <ChipState/>
       </div>
     </>
   );
