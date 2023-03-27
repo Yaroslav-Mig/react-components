@@ -6,6 +6,7 @@ import ButtonGroupStand from './button-group/ButtonGroupStand';
 import IconStand from './icon/IconStand';
 import ImageStand from './image/ImageStand';
 import ChipStand from './chip/ChipStand';
+import BadgeStand from './badge/BadgeStand';
 
 const Pages = () => {
   return (
@@ -16,6 +17,7 @@ const Pages = () => {
       <Route path={PATH.ICON} element={<IconStand />} />
       <Route path={PATH.IMAGE} element={<ImageStand />} />
       <Route path={PATH.CHIP} element={<ChipStand />} />
+      <Route path={PATH.BADGE} element={<BadgeStand />} />
     </Routes>
   );
 };

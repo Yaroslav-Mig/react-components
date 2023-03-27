@@ -1,0 +1,98 @@
+.badge {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  display: block;
+  padding: 2px;
+  width: 25px;
+  height: 25px;
+  line-height: 21px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-dark);
+  background-color: var(--bg-grey);
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.inline {
+  position: static;
+  display: inline-block;
+  margin-left: 10px;
+	transform: none;
+	line-height: normal;
+}
+
+.text {
+  width: auto;
+	height: auto;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.warning,
+.alert,
+.success,
+.info {
+  color: var(--color-white);
+	text-transform: none;
+}
+
+.warning {
+  background-color: var(--color-warning);
+}
+
+.alert {
+  background-color: var(--color-alert);
+}
+
+.success {
+  background-color: var(--color-success);
+}
+
+.info {
+  background-color: var(--color-info);
+}
+
+.outer,
+.outer.warning,
+.outer.alert,
+.outer.success,
+.outer.info {
+  background-color: var(--color-white);
+}
+
+.outer {
+  color: hsl(0, 0%, 50%);
+  border: 2px solid var(--bg-grey);
+}
+
+.outer.warning {
+  color: hsl(5, 68%, 49%);
+  border-color: hsl(5, 68%, 49%);
+}
+
+.outer.alert {
+  color: #ede821;
+  border-color: #ede821;
+}
+
+.outer.success {
+  color: #08c008;
+  border-color: #08c008;
+}
+
+.outer.info {
+  color: #23c9ff;
+  border-color: #23c9ff;
+}
+
+.btn {
+  min-width: 50px;
+	width: auto;
+  margin-right: 30px;
+}

@@ -11,7 +11,7 @@
   margin: 0 5px;
   padding: 5px;
   border-radius: 50px;
-  background-color: var(--bg-chip);
+  background-color: var(--bg-grey);
   overflow: hidden;
   cursor: pointer;
 	transition: var(--transition-200ms);

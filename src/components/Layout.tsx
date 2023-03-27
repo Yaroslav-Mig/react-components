@@ -13,7 +13,8 @@ export const PATH = {
   BUTTON_GROUP: '/button-group',
   ICON: '/icon',
   IMAGE: '/image',
-  CHIP: '/chip',
+	CHIP: '/chip',
+	BADGE: '/badge'
 } as const;
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -52,6 +53,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 						<li>
 							<NavLink to={PATH.CHIP} className={setActive}>
                 Chip
+              </NavLink>
+						</li>
+						<li>
+							<NavLink to={PATH.BADGE} className={setActive}>
+                Badge
               </NavLink>
             </li>
           </ul>
