@@ -25,7 +25,7 @@ type CommonChipProps = {
 
 type ConditionalChipProps =
   | {
-      withIcon: boolean;
+      withIcon?: boolean;
       renderIcon?: (
         settings: Omit<FontAwesomeIconProps, 'icon'>
       ) => ReactElement<FontAwesomeIconProps>;

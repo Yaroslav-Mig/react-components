@@ -1,6 +1,6 @@
 .box {
-	display: inline-flex;
-	align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 .chip {
@@ -11,14 +11,14 @@
   margin: 0 5px;
   padding: 5px;
   border-radius: 50px;
-  background-color: var(--bg-grey);
+  background-color: var(--color-light-grey);
   overflow: hidden;
   cursor: pointer;
-	transition: var(--transition-200ms);
+  transition: var(--transition-200ms);
 }
 
 .chip.active {
-  background-color: hsl(56, 60%, 80%)
+  background-color: hsl(56, 60%, 80%);
 }
 
 .chipImage,
@@ -36,7 +36,7 @@
 }
 
 .chipClose:hover {
-  background-color: hsla(0, 0%, 0%, 0.6)
+  background-color: hsla(0, 0%, 0%, 0.6);
 }
 
 .chipText {

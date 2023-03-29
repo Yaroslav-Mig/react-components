@@ -1,12 +1,15 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
-	--color-dark: hsl(0, 0%, 0%);
-	--bg-grey: hsl(0, 0%, 85%);
+  --color-dark: hsl(0, 0%, 0%);
+  --color-steel-blue: hsl(211, 49%, 63%);
+  --color-pale-orange: hsl(24, 49%, 63%);
+  --color-light-grey: hsl(0, 0%, 85%);
+	--color-grey: hsl(0, 0%, 50%);
 
-	--color-warning: hsl(5, 70%, 60%);
-	--color-alert: hsl(47, 80%, 56%);
-	--color-success: hsl(120, 80%, 40%);
-	--color-info: hsl(195, 100%, 60%);
+  --color-warning: hsl(5, 70%, 60%);
+  --color-alert: hsl(47, 80%, 56%);
+  --color-success: hsl(120, 80%, 40%);
+  --color-info: hsl(195, 100%, 60%);
 
   --color-default: hsl(0, 0%, 55%);
   --color-primary: hsl(210, 100%, 40%);
@@ -24,8 +27,9 @@
   --disabled-primary: hsl(210, 100%, 80%);
   --disabled-secondary: hsl(345, 70%, 70%);
 
-	--shadow-active: 0 0 2px 1px;
-	--transition-200ms: all 200ms ease-in;
+  --shadow-active: 0 0 2px 1px;
+  --shadow-focus-input: 0 0 7px;
+  --transition-200ms: all 200ms ease-in;
 }
 
 *,

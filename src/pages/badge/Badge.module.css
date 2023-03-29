@@ -12,7 +12,7 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--color-dark);
-  background-color: var(--bg-grey);
+  background-color: var(--color-light-grey);
   border-radius: 3px;
   z-index: 10;
 }
@@ -21,13 +21,13 @@
   position: static;
   display: inline-block;
   margin-left: 10px;
-	transform: none;
-	line-height: normal;
+  transform: none;
+  line-height: normal;
 }
 
 .text {
   width: auto;
-	height: auto;
+  height: auto;
 }
 
 .circle {
@@ -39,7 +39,7 @@
 .success,
 .info {
   color: var(--color-white);
-	text-transform: none;
+  text-transform: none;
 }
 
 .warning {
@@ -67,32 +67,32 @@
 }
 
 .outer {
-  color: hsl(0, 0%, 50%);
-  border: 2px solid var(--bg-grey);
+  color: var(--color-grey);
+  border: 2px solid var(--color-light-grey);
 }
 
 .outer.warning {
-  color: hsl(5, 68%, 49%);
-  border-color: hsl(5, 68%, 49%);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
 }
 
 .outer.alert {
-  color: #ede821;
-  border-color: #ede821;
+  color: var(--color-alert);
+  border-color: var(--color-alert);
 }
 
 .outer.success {
-  color: #08c008;
-  border-color: #08c008;
+  color: var(--color-success);
+  border-color: var(--color-success);
 }
 
 .outer.info {
-  color: #23c9ff;
-  border-color: #23c9ff;
+  color: var(--color-info);
+  border-color: var(--color-info);
 }
 
 .btn {
   min-width: 50px;
-	width: auto;
+  width: auto;
   margin-right: 30px;
 }
