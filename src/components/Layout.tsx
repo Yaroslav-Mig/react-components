@@ -14,7 +14,8 @@ export const PATH = {
   ICON: '/icon',
   IMAGE: '/image',
 	CHIP: '/chip',
-	BADGE: '/badge'
+	BADGE: '/badge',
+	INPUT: '/input'
 } as const;
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -58,6 +59,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 						<li>
 							<NavLink to={PATH.BADGE} className={setActive}>
                 Badge
+              </NavLink>
+						</li>
+						<li>
+							<NavLink to={PATH.INPUT} className={setActive}>
+                Input
               </NavLink>
             </li>
           </ul>

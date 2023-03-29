@@ -1,0 +1,105 @@
+.box {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 5px;
+  padding: 10px 30px;
+  font-family: 1rem 'Roboto', sans-serif;
+}
+
+.input {
+  min-height: 36px;
+  padding: 8px 10px;
+  font-size: 0.9em;
+  color: var(-color-dark);
+  border: 1px solid var(--color-default);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.15s ease-in-out;
+}
+
+.input[type='range'] {
+  padding: 8px 0;
+  min-height: auto;
+}
+
+.input[type='file'] {
+  border: none;
+}
+
+.input[type='checkbox'],
+.input[type='radio'],
+.input[type='file'],
+.input[type='image'],
+.input[type='button'],
+.input[type='submit'],
+.input[type='reset'],
+.input[type='color'],
+.input[type='range'] {
+  cursor: pointer;
+}
+
+.input[type='date'],
+.input[type='month'],
+.input[type='week'],
+.input[type='time'],
+.input[type='datetime'],
+.input[type='datetime-local'] {
+  cursor: default;
+}
+
+.input:focus {
+  border-color: var(--color-steel-blue);
+  box-shadow: var(--shadow-focus-input) var(--color-steel-blue);
+}
+
+.input[type='checkbox']:focus,
+.input[type='radio']:focus,
+.input[type='file']:focus,
+.input[type='image']:focus,
+.input[type='button']:focus,
+.input[type='submit']:focus,
+.input[type='reset']:focus,
+.input[type='color']:focus,
+.input[type='range']:focus {
+  border-color: var(--color-default);
+  box-shadow: none;
+}
+
+.box__error {
+	/* padding: 0 10px; */
+  font-size: 0.8em;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+  border-color: var(--color-pale-orange);
+}
+
+.input_error {
+  border-color: var(--color-pale-orange);
+}
+.input_error:focus {
+  border-color: var(--color-pale-orange);
+  box-shadow: var(--shadow-focus-input) var(--color-pale-orange);
+}
+
+.box__label::first-letter {
+  text-transform: uppercase;
+}
+
+.box__required {
+  position: absolute;
+  left: 100%;
+  top: 8px;
+  transform: translateX(-100%);
+  padding: 4px 8px;
+  font-size: 0.7em;
+  color: var(--color-white);
+  background-color: var(--color-grey);
+  border-radius: 5px;
+}
+
+.box__error {
+  color: var(--color-warning);
+}
