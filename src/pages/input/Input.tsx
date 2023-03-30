@@ -4,17 +4,29 @@ import css from './Input.module.css';
 
 type DefaultInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
-type SuperInputProps = DefaultInputProps & {
-  children?: ReactNode;
-  outerClass?: string;
-  label?: string;
-  error?: string;
-};
+type SuperInputProps = DefaultInputProps &
+  Partial<{
+    children: ReactNode;
+    label: string;
+    error: string;
+    isValid: boolean;
+    outerClass: string;
+  }>;
 
-const { box, input, input_error, box__required, box__label, box__error } = css;
+const {
+  box,
+  wrapper,
+  wrapper__label,
+  input,
+  input_error,
+  valid,
+  box__required,
+  box__label,
+  box__error,
+} = css;
 
 const Input: FC<SuperInputProps> = (props) => {
-  const { id, label, error, onChange, ...attrs } = props;
+  const { id, label, error, isValid, children, onChange, ...attrs } = props;
 
   const classInput = clsx(input, attrs.outerClass, {
     [input_error]: error,
@@ -32,7 +44,11 @@ const Input: FC<SuperInputProps> = (props) => {
         </label>
       ) : null}
 
-      <input id={id} className={classInput} onChange={changeHandler} {...attrs} />
+      <label className={wrapper}>
+        <input id={id} className={classInput} onChange={changeHandler} {...attrs} />
+        {isValid ? <span className={valid}></span> : null}
+        {children ? <span className={wrapper__label}>{children}</span> : null}
+      </label>
 
       {error ? <span className={box__error}>{error}</span> : null}
     </div>
