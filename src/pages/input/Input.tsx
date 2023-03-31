@@ -21,22 +21,25 @@ const {
   input_error,
   valid,
   box__required,
+  box__required_move,
   box__label,
   box__error,
 } = css;
 
 const Input: FC<SuperInputProps> = (props) => {
-  const { id, label, error, isValid, children, onChange, ...attrs } = props;
+  const { id, type: t, label, error, isValid, children, onChange, ...attrs } = props;
 
   const classInput = clsx(input, attrs.outerClass, {
     [input_error]: error,
   });
+  const isType = t === 'color' || t === 'radio' || t === 'checkbox' || t === 'range';
+  const classRequired = clsx(box__required, { [box__required_move]: isType });
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => onChange?.(e);
 
   return (
     <div className={box}>
-      {attrs.required ? <span className={box__required}>required</span> : null}
+      {attrs.required ? <span className={classRequired}>required</span> : null}
 
       {label ? (
         <label htmlFor={id} className={box__label}>
@@ -45,7 +48,7 @@ const Input: FC<SuperInputProps> = (props) => {
       ) : null}
 
       <label className={wrapper}>
-        <input id={id} className={classInput} onChange={changeHandler} {...attrs} />
+        <input id={id} className={classInput} type={t} onChange={changeHandler} {...attrs} />
         {isValid ? <span className={valid}></span> : null}
         {children ? <span className={wrapper__label}>{children}</span> : null}
       </label>

@@ -30,8 +30,8 @@ const InputStand = () => {
       </div>
 
       <div>
-        <h3>6. Input type color with label:</h3>
-        <Input id='file' type='color' />
+        <h3>6. Input type color with required:</h3>
+        <Input id='file' type='color' required/>
       </div>
 
       <div>
