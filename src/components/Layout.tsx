@@ -13,9 +13,10 @@ export const PATH = {
   BUTTON_GROUP: '/button-group',
   ICON: '/icon',
   IMAGE: '/image',
-	CHIP: '/chip',
-	BADGE: '/badge',
-	INPUT: '/input'
+  CHIP: '/chip',
+  BADGE: '/badge',
+  INPUT: '/input',
+  TOOLTIP: '/tooltip',
 } as const;
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -45,25 +46,30 @@ const Layout: FC<LayoutProps> = ({ children }) => {
               <NavLink to={PATH.ICON} className={setActive}>
                 Icon
               </NavLink>
-						</li>
-						<li>
+            </li>
+            <li>
               <NavLink to={PATH.IMAGE} className={setActive}>
                 Image
               </NavLink>
-						</li>
-						<li>
-							<NavLink to={PATH.CHIP} className={setActive}>
+            </li>
+            <li>
+              <NavLink to={PATH.CHIP} className={setActive}>
                 Chip
               </NavLink>
-						</li>
-						<li>
-							<NavLink to={PATH.BADGE} className={setActive}>
+            </li>
+            <li>
+              <NavLink to={PATH.BADGE} className={setActive}>
                 Badge
               </NavLink>
-						</li>
-						<li>
-							<NavLink to={PATH.INPUT} className={setActive}>
+            </li>
+            <li>
+              <NavLink to={PATH.INPUT} className={setActive}>
                 Input
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={PATH.TOOLTIP} className={setActive}>
+                Tooltip
               </NavLink>
             </li>
           </ul>

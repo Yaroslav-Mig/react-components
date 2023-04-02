@@ -1,0 +1,44 @@
+.box {
+  position: relative;
+  display: inline-block;
+}
+
+.text {
+  position: absolute;
+  padding: 5px;
+  font-size: 0.8rem;
+	text-align: center;
+  border-radius: 3px;
+  background-color: var(--color-light-grey);
+  box-shadow: 1px 1px 10px var(--color-grey);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.content {
+	cursor: pointer;
+}
+
+.top {
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  top: 50%;
+  left: 130%;
+  transform: translateY(-50%);
+}
+
+.left {
+  top: 50%;
+  right: 130%;
+  transform: translateY(-50%);
+}

@@ -8,6 +8,7 @@ import ImageStand from './image/ImageStand';
 import ChipStand from './chip/ChipStand';
 import BadgeStand from './badge/BadgeStand';
 import InputStand from './input/InputStand';
+import TooltipStand from './tooltip/TooltipStand';
 
 const Pages = () => {
   return (
@@ -20,6 +21,7 @@ const Pages = () => {
       <Route path={PATH.CHIP} element={<ChipStand />} />
       <Route path={PATH.BADGE} element={<BadgeStand />} />
       <Route path={PATH.INPUT} element={<InputStand />} />
+      <Route path={PATH.TOOLTIP} element={<TooltipStand />} />
     </Routes>
   );
 };
