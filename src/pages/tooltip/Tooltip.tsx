@@ -30,7 +30,8 @@ const Tooltip: FC<TooltipProps> = (props) => {
   let width = Math.ceil(hint.length / 10) * 10;
   width = width <= 70 ? 70 : width;
 
-  const mouseMoveHandler = () => setVisible((prev) => !prev);
+  const mouseEnterHandler = () => setVisible(true);
+  const mouseLeaveHandler = () => setVisible(false);
 
   return (
     <div className={box}>
@@ -40,7 +41,7 @@ const Tooltip: FC<TooltipProps> = (props) => {
         </Span>
       )}
 
-      <span className={content} onMouseEnter={mouseMoveHandler} onMouseLeave={mouseMoveHandler}>
+      <span className={content} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
         {children}
       </span>
     </div>

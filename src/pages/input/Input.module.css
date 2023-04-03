@@ -101,7 +101,7 @@
   font-size: 0.8em;
   letter-spacing: 1px;
   text-transform: capitalize;
-  border-color: var(--color-pale-orange);
+  color: var(--color-warning);
 }
 
 .input_error {
@@ -153,10 +153,4 @@
 .box__required_move {
 	top: 50%;
 	transform: translate(-25%, -50%);
-}
-
-.box.input[type='color']
-
-.box__error {
-  color: var(--color-warning);
 }
