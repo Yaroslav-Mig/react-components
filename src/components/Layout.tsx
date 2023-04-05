@@ -16,7 +16,8 @@ export const PATH = {
   CHIP: '/chip',
   BADGE: '/badge',
   INPUT: '/input',
-  TOOLTIP: '/tooltip',
+	TOOLTIP: '/tooltip',
+	MODAL: '/modal',
 } as const;
 
 const setActive = ({ isActive }: { isActive: boolean }): string | undefined => {
@@ -70,6 +71,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <li>
               <NavLink to={PATH.TOOLTIP} className={setActive}>
                 Tooltip
+              </NavLink>
+						</li>
+						<li>
+              <NavLink to={PATH.MODAL} className={setActive}>
+                Modal
               </NavLink>
             </li>
           </ul>

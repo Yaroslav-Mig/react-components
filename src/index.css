@@ -29,6 +29,7 @@
 
   --shadow-active: 0 0 2px 1px;
   --shadow-focus-input: 0 0 7px;
+	--box-shadow: 1px 1px 10px;
   --transition-200ms: all 200ms ease-in;
 }
 
